@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Rahavii 🎂</title>
+
+  <!-- Google Fonts: Poppins — used for all text on the site -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING HEARTS BACKGROUND
+       Hearts are created dynamically by JavaScript
+       They float upward in a loop animation
+  ════════════════════════════════════════════ -->
+  <div class="hearts-bg" id="heartsBg"></div>
+
+
+  <!-- ════════════════════════════════════════════
+       NAVIGATION BAR
+       Fixed top nav — logo left, links right
+       Active link gets a filled pill style
+       Mobile: hamburger menu toggles links
+  ════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <!-- Brand name / logo -->
+    <div class="nav-brand">
+      <span class="brand-emoji">🎀</span>
+      <span class="brand-text">For Rahavii</span>
+    </div>
+
+    <!-- Mobile hamburger button — shown only on small screens -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Navigation links list -->
+    <!-- Each <a> has a data-section attribute used by JS for active state -->
+    <ul class="nav-list" id="navList">
+      <li><a href="#home"    class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#gift"    class="nav-link"        data-section="gift">Her Gift</a></li>
+      <li><a href="#about"   class="nav-link"        data-section="about">About Her</a></li>
+      <li><a href="#gallery" class="nav-link"        data-section="gallery">Gallery</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════
+       HOME HERO SECTION
+       Two-column layout: text left, photo right
+       Reference: warm earthy landing page image
+  ════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+
+    <!-- ── Decorative background blobs (organic soft shapes) ── -->
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <!-- ── Decorative botanical leaf (center-top area) ── -->
+    <div class="deco deco-leaf">
+      <svg viewBox="0 0 80 110" fill="none">
+        <path d="M40 8 C18 22 10 48 16 70 C22 88 36 98 40 102 C44 98 58 88 64 70 C70 48 62 22 40 8Z" stroke="#B8956A" stroke-width="1.5" fill="none"/>
+        <line x1="40" y1="8"  x2="40" y2="102" stroke="#B8956A" stroke-width="1.2"/>
+        <path d="M40 32 C28 38 24 48 28 56" stroke="#B8956A" stroke-width="1" fill="none"/>
+        <path d="M40 32 C52 38 56 48 52 56" stroke="#B8956A" stroke-width="1" fill="none"/>
+        <path d="M40 58 C28 64 24 74 28 80" stroke="#B8956A" stroke-width="1" fill="none"/>
+        <path d="M40 58 C52 64 56 74 52 80" stroke="#B8956A" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- ── Decorative rainbow arc (bottom-right) ── -->
+    <div class="deco deco-rainbow">
+      <svg viewBox="0 0 130 75" fill="none">
+        <path d="M8 68 Q65 8  122 68" stroke="#C8956A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <path d="M18 68 Q65 20 112 68" stroke="#C8956A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <path d="M28 68 Q65 32 102 68" stroke="#C8956A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <path d="M38 68 Q65 44  92 68" stroke="#C8956A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <!-- ── Decorative filled heart ── -->
+    <div class="deco deco-heart">♥</div>
+
+    <!-- ── Decorative squiggle (right edge) ── -->
+    <div class="deco deco-squiggle">
+      <svg viewBox="0 0 28 90" fill="none">
+        <path d="M14 5 C24 16 4 26 14 38 C24 50 4 60 14 72 C24 82 14 88 14 88" stroke="#C8956A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+
+    <!-- ── LEFT COLUMN: text content ── -->
+    <div class="hero-left">
+
+      <!-- Small eyebrow text above heading -->
+      <p class="eyebrow fade-up">✨ A surprise just for you</p>
+
+      <!-- MAIN HEADING
+           "Birthday Rahavii" is wrapped in .highlight for special color
+           Each line is wrapped in a span for staggered animation -->
+      <h1 class="hero-h1">
+        <span class="h1-line fade-up delay-1">it's your</span>
+        <span class="h1-line highlight fade-up delay-2">Birthday Rahavii</span>
+        <span class="h1-line h1-small fade-up delay-3">i just wanna make it</span>
+        <span class="h1-line h1-unforget fade-up delay-4">unforgettable</span>
+      </h1>
+
+      <!-- Subtext below heading -->
+      <p class="hero-sub fade-up delay-5">
+        Every moment with you is a memory worth treasuring forever. 🌸
+      </p>
+
+      <!-- CTA Buttons row -->
+      <div class="hero-btns fade-up delay-6">
+        <a href="#gift"  class="btn btn-primary">Open Your Gift 🎁</a>
+        <a href="#about" class="btn btn-ghost">About You ♥</a>
+      </div>
+
+      <!-- Social media icons (decorative) -->
+      <div class="socials fade-up delay-7">
+        <a href="#" class="social" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        </a>
+        <a href="#" class="social" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+    </div><!-- end hero-left -->
+
+
+    <!-- ── RIGHT COLUMN: floating polaroid photo ── -->
+    <div class="hero-right fade-right">
+      <div class="polaroid-wrap">
+        <!-- Tape strips at the top of the polaroid (like sticky tape) -->
+        <div class="tape tape-l"></div>
+        <div class="tape tape-r"></div>
+
+        <!-- The polaroid frame itself -->
+        <div class="polaroid">
+          <!-- REPLACE /images/rahavii-hero.jpg with her actual photo -->
+          <img src="/images/rahavii.jpg" alt="Rahavii" class="polaroid-img"/>
+          <p class="polaroid-label">Rahavii 🌸</p>
+        </div>
+
+        <!-- Decorative sticker shapes around the polaroid -->
+        <span class="sticker s1">✦</span>
+        <span class="sticker s2">✿</span>
+        <span class="sticker s3">❊</span>
+      </div>
+    </div><!-- end hero-right -->
+
+  </section><!-- end #home -->
+
+
+  <!-- ════════════════════════════════════════════
+       HER GIFT PAGE — SECRET LOGIN SECTION
+       Based on split-screen login reference image
+       Left: colorful illustrated panel
+       Right: centered name input form + teddy bear
+  ════════════════════════════════════════════ -->
+  <section id="gift" class="gift-sec">
+
+    <!-- ── Left decorative panel ── -->
+    <div class="gift-panel">
+      <div class="gift-panel-inner">
+        <h2 class="gift-panel-h">🎁 A Secret<br/>Awaits You</h2>
+        <p class="gift-panel-p">Only someone very special knows the magic word...</p>
+
+        <!-- Gift box CSS illustration -->
+        <div class="css-giftbox">
+          <div class="gb-body"><div class="gb-shine"></div></div>
+          <div class="gb-lid"></div>
+          <div class="gb-ribbon-h"></div>
+          <div class="gb-ribbon-v"></div>
+          <div class="gb-bow">
+            <div class="bow-l"></div>
+            <div class="bow-r"></div>
+            <div class="bow-center"></div>
+          </div>
+        </div>
+
+        <!-- Floating emoji sparkles on panel -->
+        <span class="panel-sparkle ps1">✨</span>
+        <span class="panel-sparkle ps2">🌸</span>
+        <span class="panel-sparkle ps3">💝</span>
+        <span class="panel-sparkle ps4">⭐</span>
+      </div>
+    </div><!-- end gift-panel -->
+
+    <!-- ── Right form panel ── -->
+    <div class="gift-form-panel">
+
+      <!-- Form panel heading -->
+      <div class="gf-header">
+        <h3 class="gf-title">Unlock the Gift 🔐</h3>
+        <p class="gf-sub">Enter your frd name to reveal something special 💌</p>
+      </div>
+
+      <!-- ─────────────────────────────────────
+           TEDDY BEAR ANIMATION AREA
+           The teddy's head turns when typing starts
+           JS adds class 'looking' to #teddyBear
+           and 'happy' class on correct name
+      ───────────────────────────────────── -->
+      <div class="teddy-area">
+        <!-- Teddy bear SVG illustration -->
+        <div class="teddy" id="teddyBear">
+          <svg class="teddy-svg" viewBox="0 0 140 155" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body -->
+            <ellipse cx="70" cy="112" rx="40" ry="36" fill="#D4A574"/>
+            <!-- Arms -->
+            <ellipse cx="32" cy="106" rx="13" ry="9"  fill="#C8906A" transform="rotate(-25 32 106)"/>
+            <ellipse cx="108" cy="106" rx="13" ry="9" fill="#C8906A" transform="rotate(25 108 106)"/>
+            <!-- Legs -->
+            <ellipse cx="54"  cy="144" rx="11" ry="8" fill="#C8906A"/>
+            <ellipse cx="86"  cy="144" rx="11" ry="8" fill="#C8906A"/>
+            <!-- Tummy -->
+            <ellipse cx="70" cy="114" rx="22" ry="19" fill="#E8C49A"/>
+            <!-- Neck connection -->
+            <ellipse cx="70" cy="82"  rx="18" ry="10" fill="#D4A574"/>
+
+            <!-- HEAD GROUP — the JS rotates this element for the looking animation -->
+            <g id="teddyHead" class="t-head">
+              <!-- Main head circle -->
+              <circle cx="70" cy="60" r="36" fill="#D4A574"/>
+              <!-- Left ear outer -->
+              <circle cx="38" cy="32" r="13" fill="#D4A574"/>
+              <!-- Left ear inner (lighter) -->
+              <circle cx="38" cy="32" r="7"  fill="#E8C49A"/>
+              <!-- Right ear outer -->
+              <circle cx="102" cy="32" r="13" fill="#D4A574"/>
+              <!-- Right ear inner -->
+              <circle cx="102" cy="32" r="7"  fill="#E8C49A"/>
+              <!-- Face muzzle patch -->
+              <ellipse cx="70" cy="66" rx="21" ry="17" fill="#E8C49A"/>
+              <!-- Left eye -->
+              <circle cx="58" cy="54" r="5.5" fill="#3A2A1E"/>
+              <circle cx="60" cy="52" r="2"   fill="white"/>
+              <!-- Right eye -->
+              <circle cx="82" cy="54" r="5.5" fill="#3A2A1E"/>
+              <circle cx="84" cy="52" r="2"   fill="white"/>
+              <!-- Nose -->
+              <ellipse cx="70" cy="65" rx="4.5" ry="3" fill="#6A4A38"/>
+              <!-- Smile -->
+              <path d="M62 71 Q70 78 78 71" stroke="#6A4A38" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- Blush cheeks -->
+              <ellipse cx="48" cy="66" rx="8"  ry="5" fill="#FFAAAA" opacity="0.45"/>
+              <ellipse cx="92" cy="66" rx="8"  ry="5" fill="#FFAAAA" opacity="0.45"/>
+            </g>
+
+            <!-- Bow tie decoration on chest -->
+            <polygon points="62,90 70,96 62,102" fill="#E8769A"/>
+            <polygon points="78,90 70,96 78,102" fill="#E8769A"/>
+            <circle cx="70" cy="96" r="3.5" fill="#F5A0BB"/>
+          </svg>
+        </div>
+
+        <!-- Speech bubble — shown when wrong name is entered -->
+        <div class="t-bubble" id="tBubble">
+          <span id="tBubbleText">Hmm... try again! 🐻</span>
+        </div>
+      </div><!-- end teddy-area -->
+
+
+      <!-- THE NAME INPUT FORM -->
+      <div class="unlock-form" id="unlockForm">
+        <label class="input-label" for="nameInput">Enter your frd name</label>
+
+        <!-- Input with lock icon -->
+        <div class="input-row" id="inputRow">
+          <input
+            type="text"
+            id="nameInput"
+            class="name-input"
+            placeholder="type the magic word..."
+            autocomplete="off"
+          />
+          <span class="lock-icon" id="lockIcon">🔒</span>
+        </div>
+
+        <!-- Error message — shown on wrong name, hidden by default -->
+        <p class="err-msg" id="errMsg">Hmm... that's not the right name 🤔</p>
+
+        <!-- Unlock button -->
+        <button class="btn btn-unlock" id="unlockBtn">
+          Unlock Gift 🎁
+        </button>
+      </div>
+
+
+      <!-- ─────────────────────────────────────
+           GIFT REVEAL CONTENT
+           Hidden by default — shown after typing "wikkii"
+           Appears with a smooth scale-in animation
+      ───────────────────────────────────── -->
+      <div class="gift-reveal" id="giftReveal">
+        <div class="gr-inner">
+          <!-- Celebration emoji burst -->
+          <div class="gr-burst">🎉</div>
+          <h3 class="gr-title">You unlocked it, Rahavii! 💖</h3>
+          <p class="gr-msg">
+            This whole website is your birthday gift — built with every bit of love possible, just for you. Welcome to your special day. 🌸
+          </p>
+          <!-- Three small gift message cards -->
+          <div class="gr-cards">
+            <div class="gr-card"><span>🌹</span><p>You deserve all the flowers in the world</p></div>
+            <div class="gr-card"><span>⭐</span><p>You light up every room you walk into</p></div>
+            <div class="gr-card"><span>🎂</span><p>Happy Birthday — make a wish!</p></div>
+          </div>
+          <a href="#about" class="btn btn-primary" style="margin-top:28px;display:inline-block">
+            See what's inside ♥
+          </a>
+        </div>
+      </div>
+
+    </div><!-- end gift-form-panel -->
+  </section><!-- end #gift -->
+
+
+  <!-- ════════════════════════════════════════════
+       ABOUT HER SECTION
+       Left column: photo with floating frame
+       Right column: personality text + memory card
+       Both columns fade in on scroll
+  ════════════════════════════════════════════ -->
+  <section id="about" class="about-sec">
+
+    <!-- Background decoration -->
+    <div class="blob ba1"></div>
+
+    <!-- Floating decorative hearts scattered in background -->
+    <span class="fheart fh1">♥</span>
+    <span class="fheart fh2">♥</span>
+    <span class="fheart fh3">♥</span>
+    <span class="fheart fh4">✿</span>
+
+    <!-- Section title -->
+    <div class="sec-hdr scroll-reveal">
+      <span class="sec-eyebrow">💌 Who She Is</span>
+      <h2 class="sec-title">About <span class="highlight">Rahavii</span></h2>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="about-cols">
+
+      <!-- LEFT: photo column -->
+      <div class="about-photo-wrap scroll-reveal">
+        <!-- Floating photo frame with border and shadow -->
+        <div class="about-frame">
+          <!-- REPLACE /images/rahavii-about.jpg with her actual photo -->
+          <img src="/images/rahavii.jpg" alt="About Rahavii" class="about-img"/>
+          <div class="frame-badge">🌸 Rahavii</div>
+        </div>
+        <!-- Decorative elements around photo -->
+        <span class="aheart ah1">♥</span>
+        <span class="aheart ah2">✿</span>
+        <span class="aheart ah3">⭐</span>
+      </div>
+
+      <!-- RIGHT: text column -->
+      <div class="about-txt scroll-reveal delay-2">
+
+        <!-- Personality trait chips/pills -->
+        <div class="traits">
+          <span class="trait">🌺 Kind Soul</span>
+          <span class="trait">✨ Brightest Smile</span>
+          <span class="trait">💪 Strong Heart</span>
+          <span class="trait">🎨 Creative Mind</span>
+          <span class="trait">🌟 Rare Soul</span>
+        </div>
+
+        <!-- Bio paragraphs — replace with real description -->
+        <p class="about-p">
+          When i fell into dark , you were the one who showed me the lght💙. we were the one who fought a lot like cat😾
+        </p>
+        <p class="about-p">
+          You're one of the rarest gift i've ever had in my life . Rahavii😇, Her laugh is contagious. Her kindness is effortless. Her strength? Absolutely breathtaking.
+        </p>
+
+        <!-- Special memory card with quote -->
+        <div class="memory-box">
+          <div class="memory-icon">💭</div>
+          <div>
+            <p class="memory-lbl">A special memory</p>
+            <!-- REPLACE with a real shared memory or message -->
+            <p class="memory-q">
+              "Every little adventure with you turns into a story worth telling forever.
+              Thank you for being exactly who you are." 🌸
+            </p>
+          </div>
+        </div>
+
+        <!-- Bullet list of special qualities -->
+        <ul class="special-list">
+          <li>♥ Her warmth touches every single person around her</li>
+          <li>♥ She turns ordinary moments into something magical</li>
+          <li>♥ The world is genuinely better because she's in it</li>
+        </ul>
+
+      </div><!-- end about-txt -->
+    </div><!-- end about-cols -->
+
+  </section><!-- end #about -->
+
+
+  <!-- ════════════════════════════════════════════
+       PHOTO GALLERY SECTION
+       3 columns on desktop, 2 on tablet, 1 on mobile
+       Hover: zoom overlay with caption
+       Click: opens lightbox popup
+  ════════════════════════════════════════════ -->
+  <section id="gallery" class="gallery-sec">
+
+    <!-- Background decoration -->
+    <div class="blob bg1"></div>
+
+    <!-- Section title -->
+    <div class="sec-hdr scroll-reveal">
+      <span class="sec-eyebrow">📸 Our Story</span>
+      <h2 class="sec-title">Our Best <span class="highlight">Memories</span> ❤️</h2>
+      <p class="sec-sub">Every photo holds a thousand words of love</p>
+    </div>
+
+    <!-- Gallery grid layout
+         data-src and data-caption are read by JS for the lightbox -->
+    <div class="gallery-grid">
+
+      <div class="gal-item scroll-reveal" data-src="/images/photo1.jpg" data-caption="Sweetest smile 🌸">
+        <img src="/images/r2.jpg" alt="Memory 1" loading="lazy"/>
+        <div class="gal-overlay">
+          <span class="gal-cap">Sweetest smile 🌸</span>
+          <span class="gal-zoom">🔍</span>
+        </div>
+      </div>
+
+      <div class="gal-item scroll-reveal delay-1" data-src="/images/photo2.jpg" data-caption="Sunshine day ☀️">
+        <img src="/images/r3.jpg" alt="Memory 2" loading="lazy"/>
+        <div class="gal-overlay">
+          <span class="gal-cap">Sunshine day ☀️</span>
+          <span class="gal-zoom">🔍</span>
+        </div>
+      </div>
+
+      <div class="gal-item scroll-reveal delay-2" data-src="/images/photo3.jpg" data-caption="Pure joy ✨">
+        <img src="/images/r4.jpg" alt="Memory 3" loading="lazy"/>
+        <div class="gal-overlay">
+          <span class="gal-cap">Pure joy ✨</span>
+          <span class="gal-zoom">🔍</span>
+        </div>
+      </div>
+
+      <div class="gal-item scroll-reveal delay-1" data-src="/images/photo4.jpg" data-caption="Forever laughing 😄">
+        <img src="/images/r5.jpg" alt="Memory 4" loading="lazy"/>
+        <div class="gal-overlay">
+          <span class="gal-cap">Forever laughing 😄</span>
+          <span class="gal-zoom">🔍</span>
+        </div>
+      </div>
+
+      <!-- Wide card spans 2 columns -->
+      <div class="gal-item gal-wide scroll-reveal delay-2" data-src="/images/photo5.jpg" data-caption="Best moment ever 💕">
+        <img src="/images/r6.jpg" alt="Memory 5" loading="lazy"/>
+        <div class="gal-overlay">
+          <span class="gal-cap">Best moment ever 💕</span>
+          <span class="gal-zoom">🔍</span>
+        </div>
+      </div>
+
+      <div class="gal-item scroll-reveal delay-3" data-src="/images/photo6.jpg" data-caption="Golden memories 🌟">
+        <img src="/images/r8.jpg" alt="Memory 6" loading="lazy"/>
+        <div class="gal-overlay">
+          <span class="gal-cap">Golden memories 🌟</span>
+          <span class="gal-zoom">🔍</span>
+        </div>
+      </div>
+
+    </div><!-- end gallery-grid -->
+  </section><!-- end #gallery -->
+
+
+  <!-- ════════════════════════════════════════════
+       LIGHTBOX POPUP OVERLAY
+       Hidden by default (opacity:0, pointer-events:none)
+       JS adds class 'open' to show it when a gallery image is clicked
+       Clicking the backdrop or X button closes it
+  ════════════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox">
+    <div class="lb-box">
+      <!-- Close X button -->
+      <button class="lb-close" id="lbClose">✕</button>
+      <!-- Photo displayed in lightbox -->
+      <img src="" alt="" class="lb-img" id="lbImg"/>
+      <!-- Caption below the photo -->
+      <p class="lb-cap" id="lbCap"></p>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════
+       SITE FOOTER
+       Soft warm birthday closing message
+  ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-hearts"><span>♥</span><span>♥</span><span>♥</span></div>
+    <p class="footer-msg">Made with all the love in the world, just for you ✨</p>
+    <p class="footer-name">Happy Birthday, <strong>Rahavii</strong> 🎂</p>
+    <p class="footer-credit">— From someone who cares very much 💌</p>
+  </footer>
+
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

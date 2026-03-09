@@ -13,6 +13,19 @@
 </head>
 <body>
 
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="./audio/birthday.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+document.addEventListener("click", function () {
+  const music = document.getElementById("bgMusic");
+  music.play();
+}, { once: true });
+</script>
+
   <!-- ════════════════════════════════════════════
        FLOATING HEARTS BACKGROUND
        Hearts are created dynamically by JavaScript
